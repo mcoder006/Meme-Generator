@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Meme Generator</title>
+  </head>
+  <body
+    class="min-h-screen w-screen bg-[#003C43] text-white text-xl md:text-3xl text-center capitalize overflow-x-hidden"
+  >
+
+    <!-- Custom Categories of the files and Heading -->
+    <div class="mt-4">
+        <h1 class="underline pt-3">Custom Categories</h1>
+        <input type="text" class="bg-slate-500 rounded mt-5 border-none outline-none text-white p-1" placeholder="Enter your categories......" autofocus minlength="4"
+        id="customCategory"
+        >
+        <input type="color" id="categoryColor" class="rounded text-sm">
+
+        <button id="addCategory" class="bg-green-500 text-sm md:text-xl md:px-3 py-2 rounded"  id="imgAdd">Add Category</button>
+    </div>
+
+    <h1 id="title" class="mt-20">Meme Generator</h1>
+
+    <!-- Custom Category List -->
+    <div class="customContainer">
+
+    </div>
+
+    <!-- Categories of the memes -->
+    <div id="cat" class="categories space-y-4 pt-5 text-2xl">
+      <div
+        id="hdMeme"
+        class="md:container w-[90vw] mx-auto text-center p-4 bg-green-500 rounded dropZone transition-all duration-400 md:grid md:grid-cols-4 md:gap-4 space-y-4"
+      >
+        <h1 class="font-bold text-left">Test Meme</h1>
+      </div>
+
+      <div
+        id="decentMeme"
+        class="md:container w-[90vw] mx-auto text-center p-4 bg-yellow-500 rounded dropZone transition-all duration-400 md:grid md:grid-cols-4 md:gap-4 space-y-4"
+      >
+        <h1 class="font-bold text-left">Decent Meme</h1>
+      </div>
+
+      <div
+        id="trash"
+        class="md:container w-[90vw] dropZone transition-all duration-400 mx-auto text-center p-4 bg-red-500 rounded md:grid md:grid-cols-4 md:gap-4 space-y-4"
+      >
+        <h1 class="font-bold text-left">Trash</h1>
+      </div>
+
+      <div
+        id="intolerable"
+        class="md:container w-[90vw] mx-auto text-center p-4 bg-slate-500 rounded dropZone transition-all duration-400 md:grid md:grid-cols-4 md:gap-4 space-y-4"
+      >
+        <h1 class="font-bold text-left">intolerable</h1>
+      </div>
+    </div>
+
+    <!-- File and Image Src Upload Place -->
+    <div class="bg-slate-700 md:container w-[90vw] mx-auto rounded-lg pb-8 mb-10">
+      <div
+      id="imageContainer"
+        class="images mt-60 grid grid-cols-3 gap-4 md:container w-[90vw] mx-auto p-4 h-fit rounded"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGmUDlytmSKJqLXsQ9_5CBbeawRcs08QqM_QVOU_gluA&s"
+          alt="image"
+          class="draggable w-[200px] h-[150px] hover:cursor-all-scroll"
+          draggable="true"
+          id="image1"
+        />
+
+        <img
+          src="https://t3.ftcdn.net/jpg/02/39/22/12/360_F_239221224_ZspRhx9wK21O82bALOVfCJfH2ox2YgNx.jpg"
+          alt="image"
+          draggable="true"
+          class="draggable w-[200px] h-[150px] hover:cursor-all-scroll"
+          id="image2"
+        />
+
+        <img
+          src="https://t4.ftcdn.net/jpg/03/10/24/63/360_F_310246341_869grfwR1b87MN3qyFPe6yZZIRC83X31.jpg"
+          alt="image"
+          draggable="true"
+          class="draggable w-[200px] h-[150px] hover:cursor-all-scroll"
+          id="image3"
+        />
+      </div>
+      <form class="flex justify-center items-center">
+        <input id="imageUrl" class="p-1 border-none font-serif font-normal outline-none text-white rounded-l bg-slate-500" type="url" required>
+        <button class="bg-green-500 text-sm md:text-xl md:px-3 py-2 rounded-r"  id="imgAdd" type="submit">Add Image</button>
+      </form>
+
+      <div class="text-sm mt-4">
+        Mobile Upload : <input type="file" id="mobileFile" accept="image/*"
+        multiple
+        >
+      </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>
